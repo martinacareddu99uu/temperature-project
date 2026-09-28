@@ -7,3 +7,4 @@ print(f"The maximum temperature is: {max_temperature}")
 minimum = find_min_temperature(temperatures)
 
 print("Minimum temperature:", minimum)
+print("Number of temperatures:", len(temperatures))
