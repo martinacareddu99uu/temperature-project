@@ -1,3 +1,13 @@
+import psycopg2
+connection = psycopg2.connect(
+    host="localhost",
+    port=5432,
+    database="temperature_db",
+    user="postgres",
+    password="1234"
+)
+
+print("Connected to PostgreSQL!")
 from calculations import calculate_average, find_max_temperature, find_min_temperature
 temperatures=[18,20,22,19,21]
 average= calculate_average(temperatures)
@@ -7,3 +17,4 @@ print(f"The maximum temperature is: {max_temperature}")
 minimum = find_min_temperature(temperatures)
 
 print("Minimum temperature:", minimum)
+print("Number of temperatures:", len(temperatures))
